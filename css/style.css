@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #f2f2f2;
+  font-size: 0.9375rem;
+}
+
+.card-container {
+  border-radius: 1rem;
+  margin: 1rem 2rem;
+  overflow: hidden;
+}
+
+.card-container .card-sedan {
+  background-color: #e38826;
+}
+
+.card-container .card-sedan button {
+  color: #e38826;
+}
+
+.card-container .card-suv {
+  background-color: #006970;
+}
+
+.card-container .card-suv button {
+  color: #006970;
+}
+
+.card-container .card-luxury {
+  background-color: #004241;
+}
+
+.card-container .card-luxury button {
+  color: #004241;
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.card img {
+  margin: 3.125rem 0rem 1.25rem 3.125rem;
+}
+
+.card .heading {
+  margin: 3.125rem 0rem 1.25rem 3.125rem;
+  font-family: "Big Shoulders Display", cursive;
+  text-transform: uppercase;
+  font-size: xx-large;
+  color: #f2f2f2;
+}
+
+.card p {
+  margin: 3.125rem 0rem 1.25rem 3.125rem;
+  font-family: "Lexend Deca", cursive;
+  color: rgba(255, 255, 255, 0.75);
+  margin-right: 2rem;
+}
+
+.card a,
+.card a:active,
+.card a:visited {
+  max-width: 9.375rem;
+  max-height: 3.125rem;
+  border-radius: 25px;
+  text-decoration: none;
+  margin: 2rem 0rem 2.125rem 3.125rem;
+}
+
+.card button {
+  max-width: 9.375rem;
+  max-height: 3.125rem;
+  padding: 1rem 2rem;
+  border: none;
+  border: 1px solid white;
+  border-radius: 25px;
+  cursor: pointer;
+  font-family: "Lexend Deca", cursive;
+}
+
+.card button:hover {
+  background-color: inherit;
+  color: #f2f2f2;
+}
+
+@media screen and (min-width: 768px) {
+  .card-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    max-width: 56.25rem;
+    min-height: 31.25rem;
+    margin: 2rem auto;
+  }
+}

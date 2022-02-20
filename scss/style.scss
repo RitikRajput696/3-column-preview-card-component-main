@@ -1,0 +1,105 @@
+//variables
+$bright-orange: hsl(31, 77%, 52%);
+$dk-cyan: hsl(184, 100%, 22%);
+$xdk-cyan:hsl(179, 100%, 13%);
+$para-color: hsla(0, 0%, 100%, 0.75);
+$btn-heading-color: hsl(0, 0%, 95%);
+$heading-font:'Big Shoulders Display',
+cursive;
+$para-font:'Lexend Deca',
+cursive;
+//font
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+//main styling
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $btn-heading-color;
+    font-size: 0.9375rem;
+}
+
+.card-container {
+    border-radius: 1rem;
+    margin: 1rem 2rem;
+    overflow: hidden;
+    .card-sedan {
+        background-color: $bright-orange;
+        button {
+            color: $bright-orange;
+        }
+    }
+    .card-suv {
+        background-color: $dk-cyan;
+        button {
+            color: $dk-cyan;
+        }
+    }
+    .card-luxury {
+        background-color: $xdk-cyan;
+        button {
+            color: $xdk-cyan;
+        }
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    img {
+        margin: 3.125rem 0rem 1.25rem 3.125rem;
+    }
+    .heading {
+        margin: 3.125rem 0rem 1.25rem 3.125rem;
+        font-family: $heading-font;
+        text-transform: uppercase;
+        font-size: xx-large;
+        color: $btn-heading-color;
+    }
+    p {
+        margin: 3.125rem 0rem 1.25rem 3.125rem;
+        font-family: $para-font;
+        color: $para-color;
+        margin-right: 2rem;
+    }
+    a,
+    a:active,
+    a:visited {
+        max-width: 9.375rem;
+        max-height: 3.125rem;
+        border-radius: 25px;
+        text-decoration: none;
+        margin: 2rem 0rem 2.125rem 3.125rem;
+    }
+    button {
+        max-width: 9.375rem;
+        max-height: 3.125rem;
+        // margin: 3.125rem 0rem 1.25rem 3.125rem;
+        padding: 1rem 2rem;
+        border: none;
+        border: 1px solid white;
+        border-radius: 25px;
+        cursor: pointer;
+        font-family: $para-font;
+        &:hover {
+            background-color: inherit;
+            color: $btn-heading-color;
+        }
+    }
+}
+
+@media screen and (min-width:768px) {
+    .card-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        max-width: 56.25rem;
+        min-height: 31.25rem;
+        margin: 2rem auto;
+    }
+}
